@@ -6,11 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="#">
   <title>Sveriges Radio</title>
 </head>
 
-<body>
-  <h1>Hello World!</h1>
+<body onload="createPrograms()">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="logo">Sveriges Radio</h1>
+    <div>
+      <img class="icon" src="./images/energy.svg" alt="">
+      <img class="icon" src="./images/profile.svg" alt="">
+    </div>
+  </nav>
+  <!-- Search -->
+  <form class="search">
+    <img src="./images/search.svg" alt="">
+    <input type="search" placeholder="Search for programs">
+  </form>
+  <!-- Programs -->
+  <div class="wrapper">
+    <div class="popular-now category">
+      <h2>Popular Now</h2>
+      <p>See all</p>
+    </div>
+    <div class="horizontal-container"></div>
+    <div class="new-release category">
+      <h2>New Release</h2>
+      <p>See all</p>
+    </div>
+    <div class="vertical-container"></div>
+  </div>
   <script src="./scripts/app.js"></script>
 </body>
 
