@@ -41,13 +41,13 @@ const findQuery = (param) => {
 const createLiveAudioFromId = async () => {
   const id = JSON.parse(findQuery("id"));
   const currentProgramPlaying = await fetchFromApi(
-    `https://api.sr.se/api/v2/channels/${id}?format=json`
+    `http://api.sr.se/api/v2/channels/${id}?format=json`
   );
   const playingRightNow = await fetchFromApi(
-    `https://api.sr.se/api/v2/playlists/rightnow?channelid=${id}&format=json`
+    `http://api.sr.se/api/v2/playlists/rightnow?channelid=${id}&format=json`
   );
   const scheduleForProgram = await fetchFromApi(
-    `https://api.sr.se/v2/scheduledepisodes?channelid=${id}&format=json&pagination=false`
+    `http://api.sr.se/v2/scheduledepisodes?channelid=${id}&format=json&pagination=false`
   );
   if (scheduleForProgram) {
     createHTML({ scheduleForProgram, currentProgramPlaying, playingRightNow });
