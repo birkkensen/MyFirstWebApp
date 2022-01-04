@@ -1,4 +1,4 @@
-const SR_URL_LIVE = "http://api.sr.se/api/v2/channels?pagination=false&format=json";
+const SR_URL_LIVE = "https://api.sr.se/api/v2/channels?pagination=false&format=json";
 
 const fetchFromApi = async (url) => {
   try {
