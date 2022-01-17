@@ -7,6 +7,7 @@ const checkIfElementExists = (element) => {
   if (document.querySelector(element)) {
     return document.querySelector(element);
   } else {
+    console.log(element);
     console.log("Element does not exist");
   }
 };
