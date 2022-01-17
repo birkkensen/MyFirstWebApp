@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="shortcut icon" href="#">
   <title>Sveriges Radio</title>
@@ -50,9 +51,12 @@
     </div>
     <!-- Audio Controls -->
     <div class="music-controls">
-      <button class="back-button" onclick="goBackToStart()"><img src="../images/back.svg" alt=""></button>
-      <button class="play-button" onclick="pausePlay()"><img src="../images/play.svg" alt=""></button>
-      <button class="forward-button" onclick="goToLivePosition()"><img src="../images/forward.svg" alt=""></button>
+      <button class="back-button" onclick="goBackToStart()"><img src="../images/back.svg"
+          alt="Go back to the start"></button>
+      <button class="play-pause-button" onclick="pausePlay()"><img src="../images/play.svg"
+          alt="Play the audio"></button>
+      <button class="forward-button" onclick="goToLivePosition()"><img src="../images/forward.svg"
+          alt="Go to live position"></button>
     </div>
   </div>
   <script src="../scripts/app.js"></script>

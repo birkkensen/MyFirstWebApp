@@ -21,7 +21,7 @@ const DOMElements = {
   nowPlayingStart: checkIfElementExists(".now-playing-start"),
   nowPlayingEnd: checkIfElementExists(".now-playing-end"),
   nowPlayingText: checkIfElementExists(".now-playing h4"),
-  playBtnImage: checkIfElementExists(".play-button img"),
+  playBtnImage: checkIfElementExists(".play-pause-button img"),
   progressBar: checkIfElementExists(".progress-bar"),
   animation1: checkIfElementExists(".now-playing img"),
   animation2: checkIfElementExists(".now-playing h4"),
@@ -186,10 +186,12 @@ const pausePlay = () => {
   if (DOMElements.audio.paused) {
     DOMElements.audio.play();
     DOMElements.playBtnImage.src = "../images/pause.svg";
+    DOMElements.playBtnImage.alt = "Pause the audio";
     updateHTML();
   } else {
     DOMElements.audio.pause();
     DOMElements.playBtnImage.src = "../images/play.svg";
+    DOMElements.playBtnImage.alt = "Play the audio";
   }
 };
 

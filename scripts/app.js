@@ -25,11 +25,12 @@ const createPrograms = async () => {
 };
 
 const createHorizontalHTML = (data) => {
+  console.log(data);
   let container = document.querySelector(".horizontal-container");
   container.innerHTML += `
   <a class="link-to-live" href="./program/?id=${data.id}">
     <div class="program-horizontal">
-      <img class="program-image-horizontal" src="${data.image}" alt="programImage">  
+      <img class="program-image-horizontal" src="${data.image}" alt="${data.name}">  
       <h4>Sveriges radio ${data.name}</h4>
     </div>
   </a>
@@ -40,7 +41,7 @@ const createVerticalHTML = (data) => {
   container.innerHTML += `
   <a class="link-to-live" href="./program/?id=${data.id}">
     <div class="program-vertical">
-        <img class="program-image-vertical" src="${data.image}" alt="programImage"> 
+        <img class="program-image-vertical" src="${data.image}" alt="${data.name}"> 
       <div class="description"> 
         <h4>Sveriges radio ${data.name}</h4>
         <h5 class="type">${data.channeltype}</h5>
