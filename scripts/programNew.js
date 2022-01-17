@@ -18,7 +18,7 @@ const DOMElements = {
   channelName: checkIfElementExists(".channel-name"),
   channelType: checkIfElementExists(".channel-description"),
   audio: checkIfElementExists(".audio-controls"),
-  playButton: checkIfElementExists(".play-button img"),
+  // playButton: checkIfElementExists(".play-button img"),
   nowPlayingStart: checkIfElementExists(".now-playing-start"),
   nowPlayingEnd: checkIfElementExists(".now-playing-end"),
   nowPlayingText: checkIfElementExists(".now-playing h4"),
